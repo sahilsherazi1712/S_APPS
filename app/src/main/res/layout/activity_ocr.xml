@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ocr.S_OCR">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/linear_holder"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:id="@+id/text_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hello! Capture or Choose an Image From Gallery To Perform OCR!"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linear_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:id="@+id/btnCapture"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Capture"
+            android:layout_margin="8dp"/>
+        <Button
+            android:visibility="gone"
+            android:id="@+id/btnCopy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Copy Text"
+            android:layout_margin="8dp"/>
+    </LinearLayout>
+
+</RelativeLayout>
